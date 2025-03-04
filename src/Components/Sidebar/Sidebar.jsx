@@ -6,7 +6,7 @@ const Sidebar = ({sidebar, category, setCategory}) => {
     return (
         <div className={`sidebar ${sidebar?"": "small-sidebar"}`} >
             <div className="shortcut-links">
-                <div className={`side-link ${category===0?"active":""}`}>
+                <div className={`side-link ${category===0?"active":""}`} onClick={() =>setCategory(0)}>
                     <img src={home} alt="" /><p>Home</p>
                 </div>
                 
@@ -45,26 +45,7 @@ const Sidebar = ({sidebar, category, setCategory}) => {
 
                 <hr />
             </div>
-            <div className="subscribed-list">
-                <h3>Subscribed</h3>
-                <div className="side-link">
-                    <img src={jack} alt="" /> <p>PewDiePie</p>
-                </div>
-
-                <div className="side-link">
-                    <img src={simon} alt="" /> <p>Mrbeast</p>
-                </div>
-                 <div className="side-link">
-                    <img src={tom} alt="" /> <p>Justin Bieber</p>
-                </div>
-                 <div className="side-link">
-                    <img src={megan} alt="" /> <p>5-minute Crafts</p>
-                    <div className="side-link">
-                    <img src={cameron} alt="" /> <p>Nas Daily</p>
-                </div>
-
-                </div>
-            </div>
+           
         </div>
     )
 }
